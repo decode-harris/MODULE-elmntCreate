@@ -1,0 +1,220 @@
+/* globals & reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --spacing-sm: 1%;
+    --spacing-lg: 5%;
+
+    --debugging: 3px dotted red;
+    --wireframe: 4px solid darkblue;
+
+    --grid-ele: lightblue;
+    --flex-ele: orange;
+    --block-ele: green;
+
+    --display-txt: #FFF;
+    --content-txt: #000;
+}
+/* header */
+.header {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    background: var(--grid-ele);
+    
+}
+.header .elmnts {
+    
+    position: relative;
+    border: var(--wireframe);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header .elmnts:nth-child(1) {
+    flex-direction: column;
+    grid-column: span 4;
+    grid-row: span 4;
+}
+.header .elmnts:nth-child(2) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+.header .elmnts:nth-child(3) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+.header .elmnts:nth-child(2) h1,
+.header .elmnts:nth-child(3) h1 {
+    display: none;
+}
+.header a {
+    margin: auto;
+    color: var(--display-txt);
+    font-size: 1.34rem;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+.header p {
+    color: var(--display-txt);
+    font-style: italic;
+    font-size: 1.64rem;
+}
+.header h1 {
+    font-size: 2.89rem;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -5%);
+    
+}
+
+
+
+/* create */
+.create {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    width: 100vw;
+}
+.create form {
+    width: 900px;
+    height: 500px;
+    border: var(--wireframe);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    /* background: #000; */
+    position: relative;
+    
+}
+.create form div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--spacing-sm);
+}
+
+.create form input {
+    width: 70%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: span 6;
+}
+.error-img,
+.accept-img {
+    grid-column: span 1;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-size: 1.55rem;
+    
+}
+
+.create form label span {
+    font-size: 1.06rem;
+    text-decoration: underline;
+    font-style: italic;
+}
+input:last-of-type {
+    grid-row: span 10;;
+}
+.create form label {
+    grid-column: span 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1.67rem;
+}
+
+.buttons {
+    position: absolute;
+    bottom: 1%;
+    left: 0%;
+    /* height: 100px; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buttons button {
+    margin: auto;
+}
+#addBtn {
+    margin: auto;
+    background: rgb(38, 153, 109);
+    border-radius: 10px;
+    border: none;
+    color: var(--display-txt);
+    
+    padding: var(--spacing-sm);
+    width: 120px;
+    height: 60px;
+
+    transition: 220ms all ease-in-out;
+
+}
+#addBtn:hover {
+    border: 5px solid #FFF;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+#clrBtn {
+    background: rgb(187, 70, 16);
+    border-radius: 10px;
+    border: none;
+    color: var(--display-txt);
+    
+    padding: var(--spacing-sm);
+    width: 120px;
+    height: 60px;
+
+    transition: 220ms all ease-in-out;
+
+}
+#clrBtn:hover {
+    border: 5px solid #FFF;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* preview */ 
+.preview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    width: 100vw;
+}
+
+
+/* animations */
+.phase {
+    transition: 200ms all ease-in-out;
+}
+.shake {
+    transition: all 1s ease;
+    color: red;
+    animation-name: shake;
+    animation-duration: 200ms;
+    animation-timing-function: ease-in;
+    
+}
+
+@keyframes shake {
+    0% {transform: translateX(0);}
+    20% {transform: translateX(20px);}
+    40% {transform: translateX(50px);}
+    60% {transform: translateX(0);}
+    80% {transform: translateX(-20px);}
+    100% {transform: translateX(-50px);}
+}

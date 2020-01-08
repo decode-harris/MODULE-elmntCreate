@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MODULE : Blog Website | elmntCreate</title>
+    <link rel="stylesheet" href="index.css">
+    <script defer src="index.js"></script>
+    <script src="https://kit.fontawesome.com/4dff4a55ad.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- header -->
+    <header class="header">
+        <!-- elmnts -->
+        <div class="elmnts">
+            <h1>Title Panel</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </div>
+        <div class="elmnts">
+            <h1>Ext Links</h1>
+            <a href="#">github</a>
+            <a href="">gmail</a>
+        </div>
+        <div class="elmnts">
+            <h1>Int Links</h1>
+            <a href="#">home</a>
+            <a href="#">blog</a>
+            <a href="#">account</a>
+            <a href="#">contact</a>
+        </div>
+        <!-- elmnts -->
+    </header>
+    <!-- header -->
+
+    <!-- create -->
+    <section class="create">
+
+        <!-- create form -->
+        <form action="" id="blog">
+            
+            <label for="title" id="label-title">
+                Title
+                <span id="title-error"></span>
+            </label>
+            <input type="text" id="title">
+            <span class="error-img" style="display:none">
+                <i class="far fa-times-circle"></i>
+            </span>
+            <span class="accept-img" style="display:none">
+                <i class="far fa-check-square"></i>
+            </span>
+            
+            <label for="tagline" id="label-tag">
+                Tag
+                <span id="tag-error"></span>
+            </label>
+            <input type="text" id="tagline">    
+            <span class="error-img" style="display:none">
+                <i class="far fa-times-circle"></i>
+            </span>
+            <span class="accept-img" style="display:none">
+                <i class="far fa-check-square"></i>
+            </span>
+            
+            <label for="category" id="label-cat">
+                Category
+                <span id="cat-error"></span>
+            </label>
+            <input type="text" id="category">
+            <span class="error-img" style="display:none">
+                <i class="far fa-times-circle"></i>
+            </span>
+            <span class="accept-img" style="display:none">
+                <i class="far fa-check-square"></i>
+            </span>
+            
+            
+            <label for="text" id="label-text">
+                Blog
+                <span id="text-error"></span>
+            </label>
+            <input type="text" id="text">    
+            <span class="error-img" style="display:none">
+                <i class="far fa-times-circle"></i>
+            </span>
+            <span class="accept-img" style="display:none">
+                <i class="far fa-check-square"></i>
+            </span>
+              
+            <div class="buttons">
+                <button id="addBtn">Add</button>
+                <button id="clrBtn">Clear</button>
+            </div>
+
+        </form>
+        <!-- create form -->
+
+    </section>
+    <!-- create -->
+
+    <!-- preview -->
+    <section class="preview">
+
+        <div class="blog-preview">
+
+            <h2 id="preview-title"></h2>
+            <p id="preview-tagline"></p>
+            <p id="preview-intro"></p>
+
+            <button id="previewBtn">View</button>
+
+        </div>
+
+    </section>
+    <!-- preview -->
+    
+</body>
+</html>
