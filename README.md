@@ -1,4 +1,4 @@
-# MODULE-elmntCreate
+# forms
 Module : A blog creation page, with user / form validation, error assistance &amp; visuals cues.
 
 <h3>Features / Functions to Add</h3>
