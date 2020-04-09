@@ -1,4 +1,6 @@
 # forms
 
-Form validation, verification, authentication & CRUD operations
+Form validation
+User Verification & authentication
+CRUD operations
 
